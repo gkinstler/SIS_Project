@@ -1,0 +1,28 @@
+﻿
+@model Student
+    ViewData["Title"] = "Students";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+
+<h2>Students</h2>
+
+<table class="table table-bordered table-hover">
+    <tbody>
+        <tr>
+            <th>studentId</th>
+            <th>firstName</th>
+            <th>lastName</th>
+        </tr>
+        @foreach (Student student in Model.Student)
+        {
+            <tr>
+                <td>@Student.StudentId</td>
+                <td>@Student.FirstName</td>
+                <td>@Student.LastName</ td>
+            </tr>
+        }
+    </tbody>
+</table>
